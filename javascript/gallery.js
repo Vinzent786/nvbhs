@@ -1,7 +1,7 @@
 const c = (x) => console.log(x);
 
 function scroll(direction) {
-    const imgsArr = ['/assets/images/gallery1.webp', '/assets/images/gallery2.webp', '/assets/images/gallery3.webp', '/assets/images/gallery4.webp', '/assets/images/gallery5.webp', '/assets/images/gallery6.webp', '/assets/images/gallery7.webp'];
+    const imgsArr = ['assets/images/gallery1.webp', 'assets/images/gallery2.webp', 'assets/images/gallery3.webp', 'assets/images/gallery4.webp', 'assets/images/gallery5.webp', 'assets/images/gallery6.webp', 'assets/images/gallery7.webp'];
     let currentImgs = Array.from($('#gallery').find('> div > img'));
 
     switch (direction) {
@@ -30,7 +30,7 @@ function adjustGallery(gallery) {
         if ($(gallery).find('#newDiv').length > 0) return;
         const newDiv = $('<div></div>');
         const newImg = $('<img />');
-        newImg.attr('src', '/assets/images/gallery4.webp');
+        newImg.attr('src', 'assets/images/gallery4.webp');
         newImg.attr('alt', 'Room Image');
         newImg.attr('loading', 'lazy');
         newDiv.append(newImg);

@@ -227,6 +227,7 @@ h4 {
     overflow: hidden;
     width: 100vw;
     margin-bottom: 0;
+    border-top: 2px solid black;
 }
 
 #gallery div {
@@ -263,10 +264,16 @@ h4 {
     right: 0;
 }
 
+@media screen and (max-width: 800px) {
+    #gallery {height: 12rem;}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    #gallery {height: 20rem;}
+}
+
 @media screen and (min-width: 1200px) {
-    #gallery div{
-        height: 30rem;
-    }
+    #gallery {height: 30rem;}
 
 }
 

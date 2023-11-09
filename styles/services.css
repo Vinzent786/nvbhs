@@ -73,7 +73,7 @@ h2::after {left: 100%;} */
 /* End Services main */
 
 #find-out-more-container {
-    background: url(/assets/covers/Y8ZE0G7.webp) no-repeat center;
+    background: url(assets/covers/Y8ZE0G7.webp) no-repeat center;
     background-size: cover;
     height: 20rem;
     width: 100vw;

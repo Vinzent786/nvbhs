@@ -5,7 +5,7 @@
 #cover {
     height: 10rem;
     width: 100%;
-    background: url(assets/logos/logo5.webp) no-repeat center center;
+    background: url(../assets/logos/logo5.webp) no-repeat center center;
     background-size: contain;
 }
 

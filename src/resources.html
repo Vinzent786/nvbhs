@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vision Behavioral Health Services</title>
+    <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/master.css">
+    <link rel="stylesheet" href="/styles/resources.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script defer>
+        $(() => $('#nav-placeholder').load('/src/nav.html'));
+    </script>
+    <script defer>
+        $(document).ready(() => {
+            const height = $('footer').height()
+            $('#content-wrapper').css('min-height', `calc(100vh - ${height}px - 4rem)`);
+        });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <div id="desktop-background">
+                <p>Here you will find resources for you to access on your own, whether you are a client with us or not. These resources mostly cover reentry information for those recently released from prison.</p>
+            </div>
+            <main>
+                <div id="resources">
+                    <h2>Resources</h2>
+                    <div id="job-placement" class="info-wrapper">
+                        <article class="info-container">
+                            <h3>Job Placement Resources</h3>
+                            <span>Express Employment Professionals</span>
+                            <p>Employment Agency<br>5815 Market St. Ste 1, Boardman<br>(330) 333-7031<br>Open 8:00 AM – 5:00 PM</p>
+                            <span>Staff Right</span>
+                            <p>Employment Agency<br>7301 West Blvd. Ste B1, Youngstown<br>(330) 726-6754<br>Open 8:00 AM – 3:30 PM</p>
+                            <span>Turning Gears</span>
+                            <p>Facebook (5) Employment Agency<br> 985 Churchill Hubbard Rd. Ste C, Youngstown<br>(330) 759-0566</p>
+                            <span>Kelly Services, Inc.</span>
+                            <p>Employment Agency<br> 970 Windham Ct. Ste B-1, Youngstown<br>(330) 965-7357<br>Open 8:30 AM – 5:00 PM</p>
+                            <span>PeopleReady</span>
+                            <p id="e">Employment Agency<br> 4531 Belmont Ave #E, Youngstown<br>(513) 342-3143<br>Open 9:00 AM – 5:00 PM</p>
+                            <a href="https://jobseeker.ohiomeansjobs.monster.com/" target="_blank">Ohio Means Jobs</a>
+                            <br>
+                            <a href="https://www.ceoworks.org/" target="_blank" rel="noopener noreferrer">CEOWorks</a>
+                        </article>
+                    </div>
+                    <div id="necessities" class="info-wrapper">
+                        <article class="info-container">
+                            <h3>Housing, Food, and Clothing Resources</h3>
+                            <span>Gleaners Food Bank</span>
+                            <p>Food Bank<br> 94 Pyatt St. Youngstown<br>(330) 746-8436</p>
+                            <span>Mahoning Valley Second Harvest</span>
+                            <p>Food Bank<br> 2805 Salt Springs Rd, Youngstown<br>(330) 792-5522<br>Open    8:00 AM – 4:30 PM</p>
+                            <span>New Beginning Church</span>
+                            <p>Clothing Support<br> 3000 Market St, Youngstown <br>(330) 782-77211<br><br><a href="https://www.hud.gov/sites/documents/HUD_OGCGUIDAPPFHASTANDCR.PDF" target="_blank">US Department of Housing<br>and Urban Development</a><br><br><a href="https://www.facebook.com/welcomeHomeSIS/" target="_blank">Welcome Home SIS</a><br><br><a href="https://www.newbeginningyoungstown.com/" target="_blank">New Beginning</a></p>
+                        </article>
+                    </div>
+                    <div id="mental-health" class="info-wrapper">
+                        <article class="info-container">
+                            <h3>Mental Health Advocacy Resources</h3>
+                            <span>Mahoning County Mental Health and Recovery Board</span>
+                            <p> 222 W. Federal St. Ste 201, Youngstown<br>(330) 746-2959<br>Open   8:00 AM – 4:00 PM</p>
+                            <span>Ohio Department of Mental Health and Addiction Services</span>
+                            <p> 30 E Broad St, Columbus, Ohio 43215<br>614-466-2596</p>
+                        </article>
+                    </div>
+                </div>
+                <div id="additional-resources">
+                    <article id="reentry">
+                        <h3>Reentry Resources</h3>
+                        <p>
+                            <a href="https://www.drc.ohio.gov/reentry-office" target="_blank">Ohio Reentry Office</a><br><br>
+                            <a href="https://nationalreentryresourcecenter.org/" target="_blank">National Reentry Resource Center</a>
+                        </p>
+                    </article>
+
+                    <article id="education">
+                        <h3>Education Resources</h3>
+                        <p>
+                            <a href="https://nationalreentryresourcecenter.org/" target="_blank">National Reentry Resource Center</a><br><br>
+                            <a href="https://www.ed.gov" target="_blank">U.S. Department of Education</a>
+                        </p>
+                    </article>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

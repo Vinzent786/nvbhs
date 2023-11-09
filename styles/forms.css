@@ -1,0 +1,131 @@
+#img-container {
+    width: 100vw;
+    margin-top: 5rem;
+}
+
+#img-container > img {
+    height: auto;
+    width: 30rem;
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    display: block;
+}
+
+h2 {
+    width: fit-content;
+    margin: 1rem auto 0;
+    font-family: playfair;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+/* h2::before, h2::after {
+    content: "";
+    background-color: var(--line-color);
+    height: 1px;
+    width: 20%;
+    position: absolute;
+    top: 55%;
+}
+
+h2::before {right: 100%;}
+h2::after {left: 100%;} */
+
+@media screen and (max-width: 500px) {
+    h2 {
+        text-align: center;
+        max-width: 90vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #img-container {margin-top: 0;}
+    #img-container > img {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 2000px) {
+    #img-container > img {width: 55rem;}
+}
+
+@media screen and (min-width: 2000px) {
+    #img-container > img {width: 60rem;}
+}
+
+/* Forms Section */
+
+section {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    width: 70vw;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center
+}
+
+section article:first-child {
+    grid-column: 1 / span 2;
+}
+
+section article:nth-child(2) {
+    grid-column: 3;
+}
+
+article p, article a {
+    font-size: 1.7rem;
+    font-family: oswald;
+}
+
+article button {
+    font-size: 1.7rem;
+    font-family: oswald;
+    border: none;
+    background-color: var(--purple);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+article button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 4px 4px black;
+}
+
+@media screen and (max-width: 500px) {
+    section {margin: 1rem auto;}
+}
+
+@media screen and (max-width: 1300px) {
+    h2 {
+        font-size: 2rem;
+    }
+    section {
+        width: 80vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem;
+    }
+    section article:first-child {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    section article:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    section {
+        width: 80rem;
+    }
+}
+
+/* End Forms Section */

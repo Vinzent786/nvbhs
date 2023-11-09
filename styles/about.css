@@ -1,0 +1,238 @@
+.content-wrapper {transform: translateY(50px);}
+
+
+main {
+    display: grid;
+    grid-template-columns:  repeat(2, 15rem) repeat(2, auto);
+    grid-template-rows: 5rem repeat(3, 15rem);  
+    grid-template-areas: 
+    'header header header header'
+    'logo-1 p-1 p-1 .'
+    '. logo-2 p-2 p-2'
+    'logo-3 p-3 p-3 .';
+    column-gap: 4rem;
+    row-gap: 6rem;
+    margin: auto;
+    width: 65rem;
+}
+
+h2 {
+    grid-area: header;
+    font-family: oswald;
+    font-size: 2.5rem;
+    width: fit-content;
+    margin: 0 auto 10rem;
+    /* position: relative; */
+}
+
+/* h2::before, h2::after {
+    content: "";
+    background-color: var(--line-color);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 55%;
+}
+
+h2::before {right: 100%;}
+h2::after {left: 100%;} */
+
+.logo {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+#who-we-are-logo {
+    grid-area: logo-1;
+}
+
+#our-goal-logo {
+    grid-area: logo-2;
+}
+
+#what-we-offer-logo {
+    grid-area: logo-3;
+}
+
+#who-we-are {
+    grid-area: span-1; 
+}
+
+#our-goal {
+    grid-area: span-2;
+}
+
+#what-we-offer {
+    grid-area: span-3; 
+}
+
+#who-we-are-p {
+    grid-area: p-1;
+}
+
+#our-goal-p {
+    grid-area: p-2;
+}
+
+#what-we-offer-p {
+    grid-area: p-3; 
+}
+
+main p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: playfair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        width: 95vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        'header header header'
+        '. logo-1 .'
+        'p-1 p-1 p-1'
+        '. logo-2 .'
+        'p-2 p-2 p-2'
+        '. logo-3 .'
+        'p-3 p-3 p-3';
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 15rem;
+        margin-bottom: 1rem;
+    }
+
+    main p {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    h2 {text-decoration: underline;}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px ) {
+    main {
+        width: 95vw;
+        grid-template-areas: 
+        'header header header'
+        'logo-1 p-1 p-1'
+        'logo-2 p-2 p-2'
+        'logo-3 p-3 p-3';
+    }
+}
+
+/* End About Us Gird */
+
+/* Contact Info  */
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 10rem auto 5rem;
+    max-width: 95vw;
+}
+
+#contact-info-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    /* margin-left: 10%; */
+}
+
+#contact-info-container *:not(h2):not(#hours):not(img):not(#today-hours):not(#hours-container ul) {margin: 1rem;}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+#contact-info-container span {
+    font-size: 1.8rem;
+    font-family: playfair;
+    font-weight: bold;
+}
+
+#contact-info-container span {width: fit-content;}
+
+#contact-info-container p, address, #hours-container li {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+span > img {
+    max-height: 1rem;
+    aspect-ratio: 1 / 1;
+}
+
+#hours-container:hover, #hours-container:active {cursor:context-menu;}
+
+#hours-container:hover img, #hours-container:active img {
+    transform: rotate(180deg);
+    transition: transform 300ms;
+}
+
+.rotateBack {animation: rotateBack 300ms forwards;}
+
+@keyframes rotateBack {
+    0% {transform: rotate(180deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#hours-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    z-index: 999;
+    margin: 0;
+}
+
+#hours-list li {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 2rem;
+    }
+    #contact-info-container {
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    section{
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    section {
+        width: 75vw;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 2000px) {
+    section {
+        width: 70vw;
+    }
+}
+
+/* End Contact Info */

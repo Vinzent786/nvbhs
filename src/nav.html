@@ -1,0 +1,152 @@
+<nav>
+    <img id="nav-menu" src="/assets/logos/hamburger-icon.png" alt="Navigation Menu">
+    <h1>
+        New Vision Behavioral <br>
+        Health Services
+    </h1>
+    <ul id="link-container">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/src/about.html">ABOUT</a></li>
+        <li><a href="/src/services.html">SERVICES</a></li>
+        <li><a href="/src/resources.html">RESOURCES</a></li>
+        <li><a href="/src/contact_us.html">CONTACT US</a></li>
+        <li><a href="https://www.indeed.com/cmp/New-Vision-Behavioral-Health/about" target="_blank">EMPLOYMENT OPPURTUNITIES</a></li>
+        <li><a href="/src/covid19.html">COVID-19</a></li>
+        <li><a href="/src/forms.html">FORMS</a></li>
+    </ul>
+</nav>
+<dialog id="nav-dialog" open="false">
+    <div id="dialog-content-container">
+        <ul id="dialog-link-container">
+            <li><a href="/index.html"><p>HOME</p></a></li>
+            <li><a href="/src/about.html"><p>ABOUT</p></a></li>
+            <li><a href="/src/services.html"><p>SERVICES</p></a></li>
+            <li><a href="/src/resources.html"><p>RESOURCES</p></a></li>
+            <li><a href="/src/contact_us.html"><p>CONTACT US</p></a></li>
+            <li><a href="https://www.indeed.com/cmp/New-Vision-Behavioral-Health/about" target="_blank"><p>EMPLOYMENT OPPURTUNITIES</p></a></li>
+            <li><a href="/src/covid19.html"><p>COVID-19</p></a></li>
+            <li><a href="/src/forms.html"><p>FORMS</p></a></li>
+        </ul>
+        <button>
+            <span>&#9747;</span>
+        </button>
+    </div>
+</dialog>
+<script defer>
+    $(document).ready(() => {
+        let screenWidth = $(window).width();
+
+        const changeNav = () => {
+            screenWidth = $(window).width();
+            if ($(window).width() <= 1300) {
+                $('nav img').removeClass('fade-out');
+                $('#link-container').css('display', 'none');
+                $('#nav-menu').css('display', 'block');
+            } else {
+                if ($(window).scrollTop() === 0) {
+                    $('#link-container').css('display', 'flex');
+                    $('#nav-menu').css('display', 'none');
+                } else {
+                    $('#link-container').css('display', 'none');
+                    $('#nav-menu').css('display', 'block');
+                    $('nav img').removeClass('fade-out');
+                    $('nav img').addClass('fade-in');
+                }
+            }
+        };
+
+        (() => changeNav())();
+
+        // Opeining full screen nav view
+        $('#nav-menu').on('click', () => {
+            $('#nav-dialog').css('display', 'block');
+            $('#nav-dialog').addClass('slide-in');
+            setTimeout(() => {
+                $('.content-wrapper').css('display', 'none');
+                $('footer').css('display', 'none');
+                $('#nav-dialog').removeClass('slide-in');
+            }, 500);
+        });
+
+        // Closing fulls creen nav view
+        $('#nav-dialog button').on('click', () => {
+            $('#nav-dialog').addClass('slide-out');
+            $('.content-wrapper').css('display', 'block');
+            $('footer').css('display', 'block');
+            setTimeout(()=> {
+                $('#nav-dialog').removeClass('slide-out');
+                $('#nav-dialog').css('display', 'none');
+            }, 500);
+        });
+
+        $(window).resize(() => {
+            changeNav();
+        });
+
+        $(window).on('scroll', () => {
+            if (screenWidth <= 1300) {
+                return;
+            } 
+            if ($(window).scrollTop() === 0) {
+                $('#link-container').css('display', 'flex');
+                $('nav img').removeClass('fade-in');
+                $('nav img').addClass('fade-out');
+                $('nav img').css('display', 'none')
+            } else {
+                $('#link-container').css('display', 'none');
+                $('nav img').css('display', 'block');
+                $('nav img').removeClass('fade-out');
+                $('nav img').addClass('fade-in');
+            }
+        });
+    });
+  
+</script>
+<script defer>
+    const adjustMargin = () => {
+        const height = $('nav').height();
+        $('.content-wrapper').css('margin-top', `calc(${height}px + 1rem)`); //1rem is taking into account the nav padding
+        $('.content-wrapper').css('min-height', `calc(100vh - ${height}px)`);
+    }
+
+    // The following two function that return a promise and have asynchronous code to run based on
+    // the promise is just to ensure that the nav element is loaded in dom before setting a mutation observer that 
+    //calls the adjustMargin function
+    function waitForNav() {
+        return new Promise((resolve) => {
+            const navElement = $('nav')[0];
+
+            if (navElement) {
+                resolve(navElement);
+            } else {
+                const observer = new MutationObserver(() => {
+                    const navElement = $('nav')[0];
+                    if (navElement) {
+                        resolve(navElement);
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(document, {
+                    childList: true,
+                    subtree: true,
+                });
+            }
+        });
+    }
+
+    (async () => {
+        try {
+            const message = await waitForNav();
+            if (message) {       
+                let resizeObserver = new ResizeObserver(() => adjustMargin());
+                resizeObserver.observe($('nav')[0]);
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    })();
+
+
+    $(window).resize(() => adjustMargin()); //Calls AdjustMargin on window resize, incase a new margin is needed
+</script>

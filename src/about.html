@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vision Behavioral Health Services</title>
+    <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/master.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script defer>
+        $(() => $('#nav-placeholder').load('/src/nav.html'));
+    </script>
+    <script defer>
+        $(document).ready(() => {
+            const height = $('footer').height()
+            $('#content-wrapper').css('min-height', `calc(100vh - ${height}px -4rem)`);
+        });
+    </script>
+    <script>
+        $(document).ready(() => {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            try {
+                const date = new Date();
+                const currentDay = days[date.getDay()];
+                let text;
+                switch (currentDay) {
+                    case 'Sunday':
+                        text = "Today - Closed"
+                        break;
+                    case 'Monday':
+                        text = "Today - 08:30 am - 08:00 pm"
+                        break;
+                    case 'Tuesday':
+                        text = "Today - 08:30 am - 08:00 pm"
+                        break;
+                    case 'Wednesday':
+                        text = "Today - 08:30 am - 08:00 pm"
+                        break;
+                    case 'Thursday':
+                        text = "Today - 08:30 am - 08:00 pm"
+                        break;
+                    case 'Friday':
+                        text = "Today - 08:30 am - 08:00 pm"
+                        break;
+                    case 'Saturday':
+                        text = "Today - Closed"
+                        break;
+                    default:
+                        break;
+                }
+                $('#today-hours').text(`${text}`);
+            } catch (err) {
+                $('#today-hours').text(`There was an error getting today's hours :( - ${err}`);
+            }
+            $('#hours-container').on('mouseenter touchstart', () => {
+                $('#today-hours').css('display', 'none');
+                $('#hours-list li').css('display', 'block');
+                $('#hours-container').on('mouseleave touchend', () => {
+                    $('#today-hours').css('display', 'block');
+                    $('#hours-list li').css('display', 'none');
+                    $('#hours > img').addClass('rotateBack');
+                    setTimeout(() => $('#hours > img').removeClass('rotateBack'), 300);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <main>
+                <h2>About Us</h2>
+                <img id="who-we-are-logo" src="/assets/logos/who_we_are1.webp" alt="Who We Are" class="logo">
+                <img id="our-goal-logo" src="/assets/logos/our_goal1.webp" alt="Our Goal" class="logo">
+                <img id="what-we-offer-logo" src="/assets/logos/what_we_offer1.webp" alt="What We Offer" class="logo">
+                <p id="who-we-are-p">New Vision Behavioral Health Services is a behavioral health care network whose mission is to use a holistic care approach to assist our clients in achieving victory in behavioral and mental health.</p>
+                <p id="our-goal-p">Our goal is to provide services that will result in participants obtaining a stable mental health, healthy family structure, housing, employment, and education. Our goal is to supply our clients with case management, therapy, certified skill training programs, employment coaching, and an introduction to spiritual fellowships.</p>
+                <p id="what-we-offer-p">We are equipped with dedicated mental/behavioral health professionals who want to help residents of NE Ohio receive the highest quality of care and achieve New Visions in Behavioral Health. </p>
+            </main>
+            <section>
+                <div id="contact-info-container">
+                    <h3>Contact Information</h3>
+                    <span>Phone Number & Email</span>
+                    <p>330-234-5251<br>contact@nvbhoh.com</p>
+                    <span>Address</span>
+                    <address>80 East Midlothian, Youngstown OH 44507</address>
+                    <div id="hours-container">
+                        <span id="hours">Hours <img src="/assets/images/down-arrow.png" alt=""></span>
+                        <p id="today-hours"></p>
+                        <ul id="hours-list">
+                            <li>Mon 08:30 am - 08:00 pm</li>
+                            <li>Tue 08:30 am - 08:00 pm</li>
+                            <li>Wed 08:30 am - 08:00 pm</li>
+                            <li>Thu 08:30 am - 08:00 pm</li>
+                            <li>Fri 08:30 am - 08:00 pm</li>
+                            <li>Sat Closed</li>
+                            <li>Sun Closed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="directions">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.3609446712067!2d-80.66137432268943!3d41.06110221616835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833facb3ec76c6f%3A0x40d3fc10c9a817d2!2s80%20E%20Midlothian%20Blvd%2C%20Youngstown%2C%20OH%2044507!5e0!3m2!1sen!2sus!4v1698791324848!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

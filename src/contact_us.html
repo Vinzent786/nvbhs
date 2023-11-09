@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Vision Behavioral Health Services</title>
+        <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+        <link rel="stylesheet" href="/styles/master.css">
+        <link rel="stylesheet" href="/styles/contact_us.css">
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script src="/javascript/email.js"></script>
+        <script defer>
+            $(() => $('#nav-placeholder').load('/src/nav.html'));
+        </script>
+        <script defer>
+            $(document).ready(() => {
+                const height = $('footer').height()
+                $('#content-wrapper').css('min-height', `calc(100vh - ${height}px - 4rem)`);
+            });
+        </script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    </head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <main>
+                <h2>Contact Us</h2>
+                <dialog id="closure"></dialog>
+                <section>
+                    <div id="form-img"><p>Submit this form to send an email to our offices. We will reply as soon as possible</p></div>
+                    <form action="">
+                        <fieldset id="name-fieldset">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name" autocomplete="additional-name" placeholder="Name">
+                        </fieldset>
+                        <fieldset id="email-fieldset">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" autocomplete="email" placeholder="Email">
+                        </fieldset>
+                        <fieldset id="message-fieldset">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                        </fieldset>
+                        <button id="submit">SEND</button>
+                    </form>
+                    </section>
+                <address>80 East Midlothian Boulevard, Youngstown, Ohio 44507, United States</address>
+            </main>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

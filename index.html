@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vision Behavioral Health Services</title>
+    <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/master.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script src="/javascript/gallery.js"></script>
+    <script defer>
+        $(() => $('#nav-placeholder').load('src/nav.html', () => adjustMargin()));
+    </script>
+    <script defer>
+        $(document).ready(() => {
+            const height = $('footer').height()
+            $('#content-wrapper').css('min-height', `calc(100vh - ${height}px - 4rem)`);
+        });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <div id="cover"></div>
+            <main>
+                <div>
+                    <span id="left-line"></span><h2>Who We Are</h2><span id="right-line"></span>
+                </div>
+                <div>
+                    <span>Our Mission Statement</span>
+                    <p>Through our dedicated staff we will provide quality Behavioral Health Services that build, rebuild, and sustain individuals in our community and surrounding areas</p>
+                </div>
+                <div>
+                    <span>Our Treatment Focus</span>
+                    <p>  New Vision Behavioral Health Services seeks to serve adults ages 18+ who are in need of behavioral health and substance abuse services. Working with parole officers, case managers, and community liaisons we aim to teach skills that help our clients to manage mental health. </p>
+                </div>
+                <div>
+                    <span>Our Patient Promise</span>
+                    <p>We promise to be there for you every step of your journey. Our goal is to help you grow from your struggles, provide information and resources, and help to move forward to where you want to be in your life. </p>
+                </div>
+            </main>
+
+            <div id="img-container"><img src="/assets/images/rs=w_984,h_656.webp" alt=""></div>
+            <section id="social-container">
+                <div id="insta-feed-container">
+                    <h3>Instagram</h3>
+                    <p>Feed coming soon!</p>
+                </div>
+                <h4>Follow Us Online</h4>
+                <div id="social-icon-container">
+                    <div><a href="https://www.facebook.com/NVBHOH" target="_blank"><img src="/assets/logos/facebook-icon.png" alt="Facebook"></a></div>
+                    <div><a href="https://www.instagram.com/nvbhoh/" target="_blank"><img src="/assets/logos/instagram-icon.png" alt="Instagram"></a></div>
+                </div>
+            </section>
+            <section id="gallery">
+                <span id="left">Left Arrow</span>
+                <span id="right">Right Arrow</span>
+                <div><img src="/assets/images/gallery1.webp" alt="Office Room" loading="lazy"></div>
+                <div><img src="/assets/images/gallery2.webp" alt="Building" loading="lazy"></div>
+                <div><img src="/assets/images/gallery3.webp" alt="Meeting Space" loading="lazy"></div>
+            </section>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

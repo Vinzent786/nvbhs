@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vision Behavioral Health Services</title>
+    <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/master.css">
+    <link rel="stylesheet" href="/styles/covid19.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script defer>
+        $(() => $('#nav-placeholder').load('/src/nav.html'));
+    </script>
+    <script defer>
+        $(document).ready(() => {
+            const height = $('footer').height()
+            $('#content-wrapper').css('min-height', `calc(100vh - ${height}px - 4rem)`);
+        });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <div id="img-container">
+                <img src="/assets/covers/c19.webp" alt="Medical Image">
+            </div>
+            <main>
+                <h2>COVID-19 Prevention Policy</h2>
+                <div id="policy-container">
+                    <article>
+                        <h3>Our Policy</h3>
+                        <ul>
+                            <li><b>If you have cold symptoms, such as cough/sneezing/fever, or feel poorly, do not come into the building. Stay home.</b> If you are a client, call and inform staff of any missed appointments. If you are part of staff, make sure you inform a superior of your absence.</li>
+                            <li>If you have a positive COVID-19 diagnosis, you can return to NVBH only after you’ve fully recovered, with a doctor’s note confirming your recovery.</li>
+                            <li>If you are planning to travel voluntarily to a high-risk area with increased COVID-19 cases, we’ll ask you to quarantine for 14 calendar days before returning to NVBH. </li>
+                            <li>Wash your hands after using the toilet, before eating, and if you cough/sneeze into your hands (follow the 20 second hand washing rule). You can also use the sanitizers you’ll find around the office.</li>
+                            <li>Cough/sneeze into your sleeve, preferably into your elbow. If you use a tissue, discard it properly and clean/sanitize your hands immediately.</li>
+                            <li>Open the windows regularly to ensure open ventilation.</li>
+                            <li>Avoid touching your face, particularly eyes, nose, and mouth with your hands to prevent from getting infected.</li>
+                            <li>If you find yourself coughing/sneezing on a regular basis, avoid close physical contact with your coworkers and take extra precautionary measures (such as requesting sick leave).</li>
+                            <li>In accordance with the current mandate<b> all staff and clients are required to wear a mask inside of our buildings.</b> If you do not have a mask, a disposable one may be provided.  </li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Learn More</h3>
+                        <p>If you have questions about the COVID-19 pandemic, and how to prevent the spread click the link below to be forward to the CDC's official website on COVID-19.</p>
+                        <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fyour-health%2Findex.html" target="_blank">
+                            <button>Find Out More</button>
+                        </a>
+                    </article>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

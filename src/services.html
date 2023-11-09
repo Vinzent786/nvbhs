@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vision Behavioral Health Services</title>
+    <link rel="shortcut icon" href="/assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/master.css">
+    <link rel="stylesheet" href="/styles/services.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script defer>
+        $(() => $('#nav-placeholder').load('/src/nav.html'));
+    </script>
+    <script defer>
+        $(document).ready(() => {
+            const height = $('footer').height()
+            $('#content-wrapper').css('min-height', `calc(100vh - ${height}px - 4rem)`);
+        });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="no-footer-wrapper">
+            <main>
+                <h2>Treatment Options</h2>
+                <div id="services-container">
+                    <div>
+                        <span>Intensive Out Patient</span>
+                        <p>NVBH offers Opioid Use Disorder and Alcohol Use Disorder. Our SUD group focuses on evidence based substance abuse treatment, with the aim of helping clients recover from addiction. </p>
+                    </div>
+                    <div>
+                        <span>Psycho-social Rehabilitation</span>
+                        <p>While our main focus is group sessions and IOP, in certain cases we also provide individual behavioral counseling. Individual therapy focuses on the pressing problems caused by clients’ mental and behavioral health issues. In individual therapy sessions, clients often dig deeper into their problems, allowing them to spend more time on individual issues. </p>
+                    </div>
+                    <div>
+                        <span>Medication- Assisted Treatment</span>
+                        <p>We partner with a licensed provider of Medication-Assisted Treatment  to offer this service to our clients. MAT is the use of medications in combination with counseling and behavioral therapies to help people sustain recovery. As required by law, mental health services will be offered to all clients receiving MAT, including SUD groups and individual counseling. NVBH also has in house drug testing. Clients enrolled in SUD treatment and MAT will be drug tested routinely.</p>
+                    </div>
+                    <div>
+                        <span>Case Management</span>
+                        <p> Case Management is a collaborative process of assessment, planning, facilitation, care coordination, evaluation and advocacy for options and services to meet an individual’s and family’s needs through communication and available resources to promote patient safety, quality of care, and cost effective outcomes.</p>
+                    </div>
+                    <div>
+                        <span>Peer Support</span>
+                        <p>Our peer supporters have obtained victory over addiction and desire to walk the journey while challenging and encouraging their peers to do the same! </p>
+                    </div>
+                    <div>
+                        <span>Crisis Intervention</span>
+                        <p>NVBH offers offers immediate and short-term emergency response to mental, emotional, physical, and behavioral distress. Crisis counseling offers a short-term intervention to help clients receive assistance, resources, stabilization, and support.</p>
+                    </div>
+                </div>
+            </main>
+            <div id="find-out-more-container">
+                <div id="find-out-more">
+                    <p>Think we're a good fit?</p>
+                    <span><a href="/src/contact_us.html">Find Out More</a></span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p id="copy-right">Copyright © 2023 New Vision Behavioral Health Services - All Rights Reserved.</p>
+            <p id="phone_num">330-234-5251</p>
+        </footer>
+    </div>
+</body>
+</html>

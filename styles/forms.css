@@ -62,6 +62,8 @@ article p, article a {
     font-family: oswald;
 }
 
+article a:not(a:last-child) {margin-right: 1rem;}
+
 article button {
     font-size: 1.7rem;
     font-family: oswald;

@@ -19,27 +19,9 @@ main {
     gap: 2rem;
 }
 
-h2, span {
+span {
     font-family: playfair;
 }
-
-h2 {
-    font-size: 3rem;
-    font-weight: 100;
-    position: relative;
-}
-
-/* h2::before, h2::after {
-        content: "";
-        background-color: var(--line-color);
-        height: 2px;
-        width: 25%;
-        position: absolute;
-        top: 55%;
-}
-
-h2::before {right: 100%;}
-h2::after {left: 100%;} */
 
 main div {
     display: flex;
@@ -148,17 +130,19 @@ h3, h4 {
     text-align: center;
 }
 
-/* h3::before, h3::after, h4::before, h4::after {
+h3::before, h3::after, h4::before, h4::after {
     content: "";
     background-color: var(--line-color);
-    height: 2px;
-    width: 50%;
+    height: 1px;
     position: absolute;
     top: 55%;
 }
 
+h3::before, h3::after {width: 100%;}
+h4::before, h4::after {width: 35%;}
+
 h3::before, h4::before {right: 100%;}
-h3::after, h4::after {left: 100%;} */
+h3::after, h4::after {left: 100%;}
 
 h3 {
     margin: 5rem auto;
@@ -262,6 +246,13 @@ h4 {
 
 #right {
     right: 0;
+}
+
+.fadeIn {animation: fadeIn 2s forwards;}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
 }
 
 @media screen and (max-width: 800px) {

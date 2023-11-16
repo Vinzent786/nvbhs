@@ -21,61 +21,14 @@
             $('#content-wrapper').css('min-height', `calc(100vh - ${height}px -4rem)`);
         });
     </script>
-    <script>
-        $(document).ready(() => {
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            try {
-                const date = new Date();
-                const currentDay = days[date.getDay()];
-                let text;
-                switch (currentDay) {
-                    case 'Sunday':
-                        text = "Today - Closed"
-                        break;
-                    case 'Monday':
-                        text = "Today - 08:30 am - 08:00 pm"
-                        break;
-                    case 'Tuesday':
-                        text = "Today - 08:30 am - 08:00 pm"
-                        break;
-                    case 'Wednesday':
-                        text = "Today - 08:30 am - 08:00 pm"
-                        break;
-                    case 'Thursday':
-                        text = "Today - 08:30 am - 08:00 pm"
-                        break;
-                    case 'Friday':
-                        text = "Today - 08:30 am - 08:00 pm"
-                        break;
-                    case 'Saturday':
-                        text = "Today - Closed"
-                        break;
-                    default:
-                        break;
-                }
-                $('#today-hours').text(`${text}`);
-            } catch (err) {
-                $('#today-hours').text(`There was an error getting today's hours :( - ${err}`);
-            }
-            $('#hours-container').on('mouseenter touchstart', () => {
-                $('#today-hours').css('display', 'none');
-                $('#hours-list li').css('display', 'block');
-                $('#hours-container').on('mouseleave touchend', () => {
-                    $('#today-hours').css('display', 'block');
-                    $('#hours-list li').css('display', 'none');
-                    $('#hours > img').addClass('rotateBack');
-                    setTimeout(() => $('#hours > img').removeClass('rotateBack'), 300);
-                });
-            });
-        });
-    </script>
+    <script src="/nvbhs/javascript/hours.js"></script>
 </head>
 <body>
     <div id="nav-placeholder"></div>
     <div class="content-wrapper">
         <div class="no-footer-wrapper">
+            <h2>About Us</h2>
             <main>
-                <h2>About Us</h2>
                 <img id="who-we-are-logo" src="/nvbhs/assets/logos/who_we_are1.webp" alt="Who We Are" class="logo">
                 <img id="our-goal-logo" src="/nvbhs/assets/logos/our_goal1.webp" alt="Our Goal" class="logo">
                 <img id="what-we-offer-logo" src="/nvbhs/assets/logos/what_we_offer1.webp" alt="What We Offer" class="logo">
@@ -99,7 +52,7 @@
                             <li>Wed 08:30 am - 08:00 pm</li>
                             <li>Thu 08:30 am - 08:00 pm</li>
                             <li>Fri 08:30 am - 08:00 pm</li>
-                            <li>Sat Closed</li>
+                            <li>Sat 09:00 am - 05:00 pm</li>
                             <li>Sun Closed</li>
                         </ul>
                     </div>

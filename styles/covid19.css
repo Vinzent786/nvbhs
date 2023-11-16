@@ -46,26 +46,6 @@
 
 /* Policy section */
 
-h2 {
-    font-size: 2.5rem;
-    width: fit-content;
-    margin: 4rem auto;
-    font-family: playfair;
-    position: relative;
-}
-
-/* h2::before, h2::after {
-    content: "";
-    background-color: var(--line-color);
-    height: 1px;
-    width: 50%;
-    position: absolute;
-    top: 55%;
-}
-
-h2::before {right: 100%;}
-h2::after {left: 100%;} */
-
 #policy-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

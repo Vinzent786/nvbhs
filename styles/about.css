@@ -4,9 +4,9 @@
 main {
     display: grid;
     grid-template-columns:  repeat(2, 15rem) repeat(2, auto);
-    grid-template-rows: 5rem repeat(3, 15rem);  
+    grid-template-rows: repeat(3, 15rem);  
     grid-template-areas: 
-    'header header header header'
+    /* 'header header header header' */
     'logo-1 p-1 p-1 .'
     '. logo-2 p-2 p-2'
     'logo-3 p-3 p-3 .';
@@ -15,27 +15,6 @@ main {
     margin: auto;
     width: 65rem;
 }
-
-h2 {
-    grid-area: header;
-    font-family: oswald;
-    font-size: 2.5rem;
-    width: fit-content;
-    margin: 0 auto 10rem;
-    /* position: relative; */
-}
-
-/* h2::before, h2::after {
-    content: "";
-    background-color: var(--line-color);
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    top: 55%;
-}
-
-h2::before {right: 100%;}
-h2::after {left: 100%;} */
 
 .logo {
     height: 100%;
@@ -94,7 +73,6 @@ main p {
         width: 95vw;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
-        'header header header'
         '. logo-1 .'
         'p-1 p-1 p-1'
         '. logo-2 .'
@@ -113,15 +91,12 @@ main p {
         margin-bottom: 4rem;
         text-align: center;
     }
-
-    h2 {text-decoration: underline;}
 }
 
 @media screen and (min-width: 900px) and (max-width: 1200px ) {
     main {
         width: 95vw;
         grid-template-areas: 
-        'header header header'
         'logo-1 p-1 p-1'
         'logo-2 p-2 p-2'
         'logo-3 p-3 p-3';
@@ -186,11 +161,6 @@ span > img {
 
 .rotateBack {animation: rotateBack 300ms forwards;}
 
-@keyframes rotateBack {
-    0% {transform: rotate(180deg);}
-    100% {transform: rotate(0deg);}
-}
-
 #hours-list {
     list-style: none;
     padding: 0;
@@ -201,6 +171,25 @@ span > img {
 
 #hours-list li {
     display: none;
+}
+
+.slideDown {animation: slideDown 1s forwards;}
+
+.slideUp {animation: slideUp 1s forwards;}
+
+@keyframes slideDown {
+    0% {transform: translateY(-10%);}
+    100% {transform: translateY(0%);}
+}
+
+@keyframes slideUp {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(-10%);}
+}
+
+@keyframes rotateBack {
+    0% {transform: rotate(180deg);}
+    100% {transform: rotate(0deg);}
 }
 
 @media screen and (max-width: 1000px) {

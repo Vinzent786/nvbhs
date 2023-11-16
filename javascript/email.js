@@ -1,9 +1,19 @@
-const c = (x) => {console.log(x)}
+let startTime;
 
 function submit() {
-    let name, email, message;
     const inputList = Array.from($('input, textarea'));
     let readyToSend = true;
+    let name, email, message;
+    const currentTime = new Date().getTime();
+    const elapsedTime = currentTime - startTime;
+    c(elapsedTime)
+    
+    if (elapsedTime < 300) {
+        alert('Possible bot detected. Take your time filling out the form.');
+        readyToSend = false;
+        return;
+    }
+
     inputList.forEach(element => {
             if (element.value.length > 0) {
                 switch ($(element).attr('name')) {
@@ -38,8 +48,8 @@ function submit() {
             }
         }
     });
-    c(recaptchaCompleted)
-    if (readyToSend && recaptchaCompleted) {
+
+    if (readyToSend) {
         emailjs.send('service_8pl1o1h', 'template_8ianm4o', {
             name: name,
             email: email,
@@ -60,6 +70,7 @@ function submit() {
 }
 
 $(document).ready(() => {
+    startTime = new Date().getTime();
     $('form').submit((event) => {
         event.preventDefault();
         submit();

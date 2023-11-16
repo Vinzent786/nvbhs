@@ -39,6 +39,32 @@ h2 {
 }
 
 /* NAV */
+h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    width: fit-content;
+    position: relative;
+    margin: 0 auto 5rem;
+}
+
+h2::before, h2::after {
+    content: "";
+    background-color: var(--line-color);
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 55%;
+}
+
+h2::before {right: 100%;}
+h2::after {left: 100%;}
+
+/* Gets rid of before and after lines on small screens */
+@media screen and (max-width: 800px) {
+    h2::before, h2::after, h3::before, h3::after, h4::before, h4::after {
+        display: none;
+    }
+}
 
 #nav-placeholder {height: 0;}
 

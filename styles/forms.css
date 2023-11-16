@@ -11,26 +11,6 @@
     display: block;
 }
 
-h2 {
-    width: fit-content;
-    margin: 1rem auto 0;
-    font-family: playfair;
-    font-size: 2.5rem;
-    position: relative;
-}
-
-/* h2::before, h2::after {
-    content: "";
-    background-color: var(--line-color);
-    height: 1px;
-    width: 20%;
-    position: absolute;
-    top: 55%;
-}
-
-h2::before {right: 100%;}
-h2::after {left: 100%;} */
-
 @media screen and (max-width: 500px) {
     h2 {
         text-align: center;
@@ -100,12 +80,10 @@ article button:hover {
 
 @media screen and (max-width: 500px) {
     section {margin: 1rem auto;}
+    h2 {font-size: 2.5em;}
 }
 
 @media screen and (max-width: 1300px) {
-    h2 {
-        font-size: 2rem;
-    }
     section {
         width: 80vw;
         grid-template-columns: 1fr;

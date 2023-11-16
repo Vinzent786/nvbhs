@@ -6,7 +6,6 @@ function submit() {
     let name, email, message;
     const currentTime = new Date().getTime();
     const elapsedTime = currentTime - startTime;
-    c(elapsedTime)
     
     if (elapsedTime < 300) {
         alert('Possible bot detected. Take your time filling out the form.');

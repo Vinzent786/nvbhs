@@ -9,22 +9,22 @@ $(document).ready(() => {
                 text = "Today - Closed";
                 break;
             case 'Monday':
-                text = "Today - 08:30 am - 08:00 pm";
+                text = "Today - 09:00 am - 05:00 pm";
                 break;
             case 'Tuesday':
-                text = "Today - 08:30 am - 08:00 pm";
+                text = "Today - 09:00 am - 09:00 pm";
                 break;
             case 'Wednesday':
-                text = "Today - 08:30 am - 08:00 pm";
+                text = "Today - 09:00 am - 05:00 pm";
                 break;
             case 'Thursday':
-                text = "Today - 08:30 am - 08:00 pm";
+                text = "Today - 09:00 am - 09:00 pm";
                 break;
             case 'Friday':
-                text = "Today - 08:30 am - 08:00 pm";
+                text = "Today - 09:00 am - 05:00 pm";
                 break;
             case 'Saturday':
-                text = "Today - 09:00 am - 05:00 pm";
+                text = "Today - 09:00 am - 04:00 pm";
                 break;
             default:
                 break;

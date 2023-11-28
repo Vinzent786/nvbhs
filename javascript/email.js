@@ -49,7 +49,7 @@ function submit() {
     });
 
     if (readyToSend) {
-        emailjs.send('service_8pl1o1h', 'template_8ianm4o', {
+        emailjs.send('service_bqpqxhh', 'template_hagabdk', {
             name: name,
             email: email,
             message: message
@@ -74,6 +74,6 @@ $(document).ready(() => {
         event.preventDefault();
         submit();
     });
-    emailjs.init('Qmj-x8EzmOhgBtNF5');
+    emailjs.init('9F4ymJvRF19oqauyX');
 });
 

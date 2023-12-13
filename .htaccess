@@ -1,0 +1,17 @@
+RewriteEngine on
+
+# Redirect from non-www to www
+RewriteCond %{HTTP_HOST} ^example\.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+
+# Redirect from www to non-www
+RewriteCond %{HTTP_HOST} ^www\.example\.com [NC]
+RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
+
+# URL rewrite for .html extension
+# Doesn't apply to existing directories
+RewriteCond %{REQUEST_FILENAME} !-d
+# Check for file in directory with .html extension
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# Show the page with html extension
+RewriteRule ^(.*)$ $1.html [NC,L]

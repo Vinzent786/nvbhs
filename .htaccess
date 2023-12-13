@@ -1,12 +1,12 @@
 RewriteEngine on
 
 # Redirect from non-www to www
-RewriteCond %{HTTP_HOST} ^example\.com [NC]
-RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^vinzent786\.github\.io/nvbhs [NC]
+RewriteRule ^(.*)$ https://www.vinzent786.github.io/nvbhs/$1 [L,R=301]
 
 # Redirect from www to non-www
-RewriteCond %{HTTP_HOST} ^www\.example\.com [NC]
-RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.vinzent786\.github\.io/nvbhs [NC]
+RewriteRule ^(.*)$ https://vinzent786.github.io/nvbhs/$1 [L,R=301]
 
 # URL rewrite for .html extension
 # Doesn't apply to existing directories

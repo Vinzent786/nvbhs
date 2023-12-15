@@ -223,9 +223,9 @@ h4 {
     height: 100%;
 }
 
-#gallery img:hover {
+/* #gallery img:hover {
     transform: scale(1.1);
-}
+} */
 
 #big-gallery {
     background-color: var(--purple);

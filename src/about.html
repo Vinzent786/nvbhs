@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Vision Behavioral Health Services</title>
-    <link rel="shortcut icon" href="assets/logos/logo3.webp" type="image/x-icon">
-    <link rel="stylesheet" href="styles/master.css?v=1.2">
-    <link rel="stylesheet" href="styles/about.css?v=1.1">
+    <link rel="shortcut icon" href="../assets/logos/logo3.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/master.css?v=1.2">
+    <link rel="stylesheet" href="../styles/about.css?v=1.1">
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"></script>
     <script defer>
-        $(() => $('#nav-placeholder').load('src/nav.html'));
+        $(() => $('#nav-placeholder').load('/src/nav.html'));
     </script>
     <script defer>
         $(document).ready(() => {
@@ -21,37 +21,37 @@
             $('#content-wrapper').css('min-height', `calc(100vh - ${height}px -4rem)`);
         });
     </script>
-    <script src="javascript/hours.js?v=1.1"></script>
+    <script src="/javascript/hours.js?v=1.1"></script>
 </head>
 <body>
     <nav>
-        <img id="nav-menu" src="assets/logos/hamburger-icon.png" alt="Navigation Menu">
+        <img id="nav-menu" src="../assets/logos/hamburger-icon.png" alt="Navigation Menu">
         <h1>
             New Vision Behavioral <br>
             Health Services
         </h1>
         <ul id="link-container">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="src/about.html">ABOUT</a></li>
-            <li><a href="src/services.html">SERVICES</a></li>
-            <li><a href="src/resources.html">RESOURCES</a></li>
-            <li><a href="src/contact_us.html">CONTACT US</a></li>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="resources.html">RESOURCES</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
             <li><a href="https://www.indeed.com/cmp/New-Vision-Behavioral-Health/about" target="_blank">EMPLOYMENT OPPURTUNITIES</a></li>
-            <li><a href="src/covid19.html">COVID-19</a></li>
-            <li><a href="src/forms.html">FORMS</a></li>
+            <li><a href="covid19.html">COVID-19</a></li>
+            <li><a href="forms.html">FORMS</a></li>
         </ul>
     </nav>
     <dialog id="nav-dialog" open="false">
         <div id="dialog-content-container">
             <ul id="dialog-link-container">
-                <li><a href="index.html"><p>HOME</p></a></li>
-                <li><a href="src/about.html"><p>ABOUT</p></a></li>
-                <li><a href="src/services.html"><p>SERVICES</p></a></li>
-                <li><a href="src/resources.html"><p>RESOURCES</p></a></li>
-                <li><a href="src/contact_us.html"><p>CONTACT US</p></a></li>
+                <li><a href="../index.html"><p>HOME</p></a></li>
+                <li><a href="about.html"><p>ABOUT</p></a></li>
+                <li><a href="services.html"><p>SERVICES</p></a></li>
+                <li><a href="resources.html"><p>RESOURCES</p></a></li>
+                <li><a href="contact_us.html"><p>CONTACT US</p></a></li>
                 <li><a href="https://www.indeed.com/cmp/New-Vision-Behavioral-Health/about" target="_blank"><p>EMPLOYMENT OPPURTUNITIES</p></a></li>
-                <li><a href="src/covid19.html"><p>COVID-19</p></a></li>
-                <li><a href="src/forms.html"><p>FORMS</p></a></li>
+                <li><a href="covid19.html"><p>COVID-19</p></a></li>
+                <li><a href="forms.html"><p>FORMS</p></a></li>
             </ul>
             <button>
                 <span>&#9747;</span>
@@ -63,9 +63,9 @@
         <div class="no-footer-wrapper">
             <h2>About Us</h2>
             <main>
-                <img id="who-we-are-logo" src="assets/logos/who_we_are1.webp" alt="Who We Are" class="logo">
-                <img id="our-goal-logo" src="assets/logos/our_goal1.webp" alt="Our Goal" class="logo">
-                <img id="what-we-offer-logo" src="assets/logos/what_we_offer1.webp" alt="What We Offer" class="logo">
+                <img id="who-we-are-logo" src="../assets/logos/who_we_are1.webp" alt="Who We Are" class="logo">
+                <img id="our-goal-logo" src="../assets/logos/our_goal1.webp" alt="Our Goal" class="logo">
+                <img id="what-we-offer-logo" src="../assets/logos/what_we_offer1.webp" alt="What We Offer" class="logo">
                 <p id="who-we-are-p">New Vision Behavioral Health Services is a behavioral health care network whose mission is to use a holistic care approach to assist our clients in achieving victory in behavioral and mental health.</p>
                 <p id="our-goal-p">Our goal is to provide services that will result in participants obtaining a stable mental health, healthy family structure, housing, employment, and education. Our goal is to supply our clients with case management, therapy, certified skill training programs, employment coaching, and an introduction to spiritual fellowships.</p>
                 <p id="what-we-offer-p">We are equipped with dedicated mental/behavioral health professionals who want to help residents of NE Ohio receive the highest quality of care and achieve New Visions in Behavioral Health. </p>
@@ -78,7 +78,7 @@
                     <span>Address</span>
                     <address>80 East Midlothian, Youngstown OH 44507</address>
                     <div id="hours-container">
-                        <span id="hours">Hours <img src="assets/images/down-arrow.png" alt=""></span>
+                        <span id="hours">Hours <img src="../assets/images/down-arrow.png" alt=""></span>
                         <p id="today-hours"></p>
                         <ul id="hours-list">
                             <li>Mon 09:00 am - 05:00 pm</li>

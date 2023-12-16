@@ -7,10 +7,10 @@ function scroll(direction) {
             for (let i = 0; i < currentImgs.length; i++) {
                 let srcNum = parseInt(currentImgs[i].src.split('gallery')[1].split('.')[0]); //number after 'gallery' in src
                 if (srcNum === 6) {
-                    let src = `/nvbhs/assets/images/gallery0.webp`; //Loops back to first image
+                    let src = `assets/images/gallery0.webp`; //Loops back to first image
                     currentImgs[i].src = src;
                 } else {
-                    let src = `/nvbhs/assets/images/gallery${srcNum + 1}.webp`; //Changes src to next image to be displayed
+                    let src = `assets/images/gallery${srcNum + 1}.webp`; //Changes src to next image to be displayed
                     currentImgs[i].src = src;
                 }
                 $(currentImgs[i]).addClass('fadeIn');
@@ -21,10 +21,10 @@ function scroll(direction) {
             for (let i = 0; i < currentImgs.length; i++) {
                 let srcNum = parseInt(currentImgs[i].src.split('gallery')[1].split('.')[0]);
                 if (srcNum === 0) {
-                    let src = `/nvbhs/assets/images/gallery6.webp`;
+                    let src = `assets/images/gallery6.webp`;
                     currentImgs[i].src = src;
                 } else {
-                    let src = `/nvbhs/assets/images/gallery${srcNum - 1}.webp`;
+                    let src = `assets/images/gallery${srcNum - 1}.webp`;
                     currentImgs[i].src = src;
                 }
                 $(currentImgs[i]).addClass('fadeIn');

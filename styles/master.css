@@ -28,15 +28,15 @@ h2 {
 
 @font-face {
     font-family: open_sans;
-    src: url(/nvbhs/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 @font-face {
     font-family: oswald;
-    src: url(/nvbhs/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+    src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: playfair;
-    src: url(/nvbhs/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+    src: url(fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
 /* NAV */
